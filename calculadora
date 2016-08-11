@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main()
+{
+  double x,y,z,t;
+  char o,i;
+
+  scanf("%lf%lf", &x, &y);
+
+  getchar();
+  o = getchar();
+
+  if(o == 43)
+  {
+    z = x + y;
+  }
+  else if(o == 45)
+  {
+    z = x - y;
+  }
+  else if(o == 42)
+  {
+    z = x * y;
+  }
+  else if(o == 47)
+  {
+    if(y != 0)
+    {z = x / y;}
+  }
+  else
+  {
+    printf("operacao nao pode ser realizada\n");
+  }
+  printf("%.3lf\n",z);
+
+  //loop//
+  scanf("%lf", &t);
+  getchar();
+  i = getchar();
+
+
+  while(i != 38)
+{
+
+  if(i == 43)
+  {
+    z = z + t;
+      printf("%.3lf\n", z);
+  }
+  else if(i == 45)
+  {
+    z = z - t;
+      printf("%.3lf\n", z);
+  }
+  else if(i == 42)
+  {
+    z = z * t;
+      printf("%.3lf\n", z);
+  }
+  else if(i == 47)
+  {
+    if(t != 0)
+    {z = z / t;
+      printf("%.3lf\n", z);}
+  }
+  else
+  {
+    printf("operacao nao pode ser realizada\n");
+  }
+
+  scanf("%lf", &t);
+  getchar();
+  i = getchar();
+
+
+
+}
+
+
+
+
+  return 0;
+}
